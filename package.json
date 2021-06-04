@@ -1,0 +1,44 @@
+{
+  "name": "firebase-rules-formatter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Formatter for Firebase Realtime Database Rules with type safety",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxxxxxdlp/firebase-rules-formatter"
+  },
+  "homepage": "https://github.com/maxxxxxdlp/firebase-rules-formatter/#readme",
+  "bugs": {
+    "url": "https://github.com/maxxxxxdlp/firebase-rules-formatter/issues"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "npm run pre-commit --all-files",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "firebase",
+    "firebase-realtime-database",
+    "prettier"
+  ],
+  "dependencies": {
+    "prettier": "^2.3.0"
+  },
+  "devDependencies": {
+    "@maxxxxxdlp/eslint-config": "^1.0.1",
+    "@maxxxxxdlp/prettier-config": "^1.0.1",
+    "@maxxxxxdlp/stylelint-config": "^0.1.2",
+    "@types/prettier": "^2.2.3",
+    "eslint": "^7.26.0",
+    "stylelint": "^13.13.1",
+    "typescript": "^4.2.4"
+  },
+  "types": "lib/index.d.ts",
+  "prettier": "@maxxxxxdlp/prettier-config"
+}

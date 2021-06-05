@@ -1,47 +1,34 @@
-# Firebase Rules Formatter
+# Prettier for Firebase rules
 
-Formatter for Firebase Realtime Database Rules with type safety
+Formatter for Firebase Realtime Database Rules
 
 ## Usage
 
 Install this package:
 
 ```bash
-npm install firebase-rules-formatter
+npm install --save-dev prettier prettier-plugin-firebase
 ```
 
-Import the library into your script:
+Then run it like this:
 
-```js
-import formatFirebaseRules, { ref } from 'firebase-rules-formatter';
+```bash
+prettier --write firebase_database.rules
 ```
 
-Use the formatter:
+By default, this plugin would try to parse all files with the extension `.rules`
+as Firebase Realtime Database Rules. You can customize this behaviour though
+configuration overwrites in your `.perttierrc` or equivalent:
 
-```js
-const formattedRulesString = formatFirebaseRules(({ newData, auth }) => ({
-  read: false,
-  write: false,
-  schema: {
-    users: {
-      schema: {
-        $userId: {
-          write: () =>
-            ref('$userId') === auth.uid &&
-            (!newData.exists() ||
-              newData.hasChildren([
-                'subscribeToNewsletter',
-                'sources',
-                'postsContent',
-                'listeningStats',
-                'totalStats',
-                'deletedPostsMeta',
-                'deletedPostsContent',
-              ])),
-        },
-      },
-    },
-  },
-}));
-console.log(formattedRulesString);
+```json
+{
+  "overrides": [
+    {
+      "files": "firebase_database_rules.yaml",
+      "options": {
+        "parser": "firebase-database"
+      }
+    }
+  ]
+}
 ```

@@ -1,23 +1,25 @@
 {
-  "name": "firebase-rules-formatter",
+  "name": "prettier-plugin-firebase-database",
   "version": "1.0.0",
   "private": true,
-  "description": "Formatter for Firebase Realtime Database Rules with type safety",
+  "description": "Formatter for Firebase Realtime Database Rules",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/maxxxxxdlp/firebase-rules-formatter"
+    "url": "git://github.com/maxxxxxdlp/prettier-plugin-firebase-database"
   },
-  "homepage": "https://github.com/maxxxxxdlp/firebase-rules-formatter/#readme",
+  "homepage": "https://github.com/maxxxxxdlp/prettier-plugin-firebase-database/#readme",
   "bugs": {
-    "url": "https://github.com/maxxxxxdlp/firebase-rules-formatter/issues"
+    "url": "https://github.com/maxxxxxdlp/prettier-plugin-firebase-database/issues"
   },
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
+    "check-types": "tsc",
     "lint": "npm run pre-commit --all-files",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run lint",
+    "test": "jest"
   },
   "files": [
     "lib/**/*"
@@ -25,18 +27,27 @@
   "keywords": [
     "firebase",
     "firebase-realtime-database",
-    "prettier"
+    "prettier",
+    "prettier-plugin"
   ],
   "dependencies": {
     "prettier": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-typescript": "^7.13.0",
     "@maxxxxxdlp/eslint-config": "^1.0.1",
     "@maxxxxxdlp/prettier-config": "^1.0.1",
     "@maxxxxxdlp/stylelint-config": "^0.1.2",
+    "@types/jest": "^26.0.23",
     "@types/prettier": "^2.2.3",
+    "babel-jest": "^27.0.2",
     "eslint": "^7.26.0",
+    "jest": "^27.0.4",
+    "prettier": "^2.3.0",
     "stylelint": "^13.13.1",
+    "ts-jest": "^27.0.2",
     "typescript": "^4.2.4"
   },
   "types": "lib/index.d.ts",

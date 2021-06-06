@@ -23,6 +23,7 @@
     "module": "commonjs",
     "target": "es5",
     "allowJs": false,
+    "sourceMap": true,
     /**/
     /* Strict Checks */
     "strict": true,

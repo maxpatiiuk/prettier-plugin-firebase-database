@@ -19,7 +19,7 @@ const print: Printer<Node>['print'] = ({ stack: [node] }, options) => {
 
   const formattedStructure = format(node.structure, {
     ...options,
-    parser: 'json',
+    parser: 'json-stringify',
   });
 
   const rules = Array.from(node.rules);

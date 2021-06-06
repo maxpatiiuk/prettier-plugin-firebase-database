@@ -34,15 +34,19 @@ const print: Printer<Node>['print'] = ({ stack: [node] }, options) => {
       if (typeof rule === 'undefined')
         throw new Error('Failed printing the structure');
 
-      const formattedRule = format(rule, {
+      const formattedRule = format(`${rule}`, {
         ...options,
         parser: 'babel',
         singleQuote: true,
         printWidth: options.printWidth - rulePosition,
-        semi: false,
+        semi: true,
       }).trim();
 
-      const splitRule = formattedRule.split(lineEnding);
+      const trimmedRule = formattedRule.endsWith(';')
+        ? formattedRule.slice(0, -1)
+        : formattedRule;
+
+      const splitRule = trimmedRule.split(lineEnding);
 
       const wrapLine = options.printWidth - rulePosition < MIN_PRINT_WIDTH;
       if (wrapLine) rulePosition = line.search(/\S/) + options.tabWidth;

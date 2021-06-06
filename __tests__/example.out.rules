@@ -55,7 +55,7 @@
                               newData.val().matches(/^#[0-9a-f]{6}$/)",
             },
             "priority": {
-              ".validate": ";(newData.isNumber() && newData.val() > 1) ||
+              ".validate": "(newData.isNumber() && newData.val() > 1) ||
                               newData.val() === false",
             }
           }
@@ -125,7 +125,7 @@
                                 'characters',
                               ])",
               "$category": {
-                ".validate": ";($category === 'posts' ||
+                ".validate": "($category === 'posts' ||
                                 $category === 'paragraphs' ||
                                 $category === 'words' ||
                                 $category === 'characters') &&
@@ -146,7 +146,7 @@
                           'characters',
                         ])",
           "$category": {
-            ".validate": ";($category === 'queuedPosts' ||
+            ".validate": "($category === 'queuedPosts' ||
                             $category === 'posts' ||
                             $category === 'paragraphs' ||
                             $category === 'words' ||

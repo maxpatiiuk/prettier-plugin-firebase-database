@@ -1,3 +1,5 @@
 node_modules
 lib
 coverage
+jest.config.js
+__tests__/*.js

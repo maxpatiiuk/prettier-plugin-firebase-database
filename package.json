@@ -1,7 +1,7 @@
 {
   "name": "prettier-plugin-firebase-database",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Formatter for Firebase Realtime Database Rules",
   "license": "MIT",
   "repository": {
@@ -16,7 +16,7 @@
   "scripts": {
     "build": "tsc",
     "check-types": "tsc",
-    "lint": "npm run pre-commit --all-files",
+    "lint": "pre-commit run --all-files",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
     "test": "jest"

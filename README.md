@@ -18,7 +18,7 @@ prettier --write firebase_database.rules
 
 By default, this plugin would try to parse all files with the extension `.rules`
 as Firebase Realtime Database Rules. You can customize this behaviour though
-configuration overwrites in your `.perttierrc` or equivalent:
+configuration overwrites in your `.prettierrc` or equivalent:
 
 ```json
 {

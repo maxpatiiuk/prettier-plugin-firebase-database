@@ -8,6 +8,9 @@ module.exports = {
     browser: true,
     node: true,
   },
+  settings: {
+    'import/core-modules': [],
+  },
   extends: ['@maxxxxxdlp/eslint-config'],
   rules: {},
 };

@@ -6,11 +6,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/maxxxxxdlp/prettier-plugin-firebase-database"
+    "url": "https://github.com/maxpatiiuk/prettier-plugin-firebase-database"
   },
-  "homepage": "https://github.com/maxxxxxdlp/prettier-plugin-firebase-database/#readme",
+  "homepage": "https://github.com/maxpatiiuk/prettier-plugin-firebase-database/#readme",
   "bugs": {
-    "url": "https://github.com/maxxxxxdlp/prettier-plugin-firebase-database/issues"
+    "url": "https://github.com/maxpatiiuk/prettier-plugin-firebase-database/issues"
   },
   "main": "lib/index.js",
   "scripts": {
